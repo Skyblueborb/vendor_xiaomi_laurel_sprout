@@ -270,7 +270,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/ipa_fws.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b04 \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/ipa_fws.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.elf \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.mdt \
-    vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/wlan/qca_cld/wlan_mac.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/wlan_mac.bin \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/lib/mibokeh_660_opencl.bin:$(TARGET_COPY_OUT_VENDOR)/lib/mibokeh_660_opencl.bin \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
@@ -283,13 +282,16 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/laurel_sprout/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.camera.device@3.2 \
+    android.hardware.camera.provider@2.4-external \
     android.hardware.camera.provider@2.4-legacy \
-    camera.device@1.0-impl_vendor \
-    camera.device@3.2-impl_vendor \
-    camera.device@3.3-impl_vendor \
-    camera.device@3.4-impl_vendor \
-    camera.device@3.5-impl_vendor \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl \
+    camera.device@3.3-impl \
+    camera.device@3.4-external-impl \
+    camera.device@3.4-impl \
+    camera.device@3.5-external-impl \
+    camera.device@3.5-impl \
+    camera.device@3.6-external-impl \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -297,6 +299,7 @@ PRODUCT_PACKAGES += \
     libq3dtools_adreno \
     libq3dtools_esx \
     android.hardware.bluetooth@1.0-impl-qti \
+    android.hardware.camera.provider@2.4-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
     vendor.qti.hardware.btconfigstore@1.0-impl \
     vendor.qti.hardware.btconfigstore@2.0-impl \
@@ -388,7 +391,7 @@ PRODUCT_PACKAGES += \
     libxml \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
-    vendor.qti.hardware.camera.device@3.2_vendor \
+    vendor.qti.hardware.camera.device@3.2 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fingerprint@1.0 \
     vendor.qti.hardware.fm@1.0_vendor \
@@ -450,7 +453,6 @@ PRODUCT_PACKAGES += \
     libaudioalsa \
     libaudioconfigstore \
     libaudioparsers \
-    libbatterylistener_laurel_sprout \
     libc++_shared \
     libcamera_scene \
     libchromatix_csidtg_common \
@@ -1143,13 +1145,10 @@ PRODUCT_PACKAGES += \
     libchromatix_laurus_s5kgd1_sunny_zsl_preview_panorama \
     libchromatix_laurus_s5kgd1_sunny_zsl_video \
     libchromatix_laurus_s5kgd1_sunny_zsl_video_weixin \
-    libcirrusspkrprot_laurel_sprout \
-    libcomprcapture_laurel_sprout \
     libdepthmapwrapper \
     libdng_sdkvendor \
     libdrc \
     libdsd2pcm \
-    libexthwplugin_laurel_sprout \
     libfastcrc \
     libflash_pmic \
     libft2vendor \
@@ -1158,9 +1157,7 @@ PRODUCT_PACKAGES += \
     libgcs-osal \
     libgcs \
     libhal_dbg \
-    libhdmiedid_laurel_sprout \
     libhdmipassthru \
-    libhfp_laurel_sprout \
     libjpegdhw \
     libjpegdmahw \
     libjpegehw \
@@ -1299,9 +1296,6 @@ PRODUCT_PACKAGES += \
     libqtigef \
     libremosaic_daemon \
     libsmwrapper \
-    libsndmonitor_laurel_sprout \
-    libspkrprot_laurel_sprout \
-    libssrec_laurel_sprout \
     libsurround_3mic_proc \
     libsymphony-cpu \
     libsymphonypower \
